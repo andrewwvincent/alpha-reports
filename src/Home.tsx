@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 
 const reports = [
   {
+    slug: "scout-tracker",
+    title: "School Closure Scout Tracker",
+    subtitle: "Live Feed | 11 Yutori Scouts | Filterable by State & Signal Type",
+    date: "Live — auto-updates",
+    address: "National (31 states)",
+  },
+  {
     slug: "for-sale-schools",
     title: "School Buildings For Sale — Bid Decision Report",
     subtitle: "14 Properties | Research-Verified | TSA & Alpha Model Fit",
