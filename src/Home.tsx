@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 
 const reports = [
   {
+    slug: "for-sale-schools",
+    title: "School Buildings For Sale — Bid Decision Report",
+    subtitle: "14 Properties | Research-Verified | TSA & Alpha Model Fit",
+    date: "March 26, 2026",
+    address: "National",
+  },
+  {
     slug: "hudson-bend-single-sport",
     title: "Hudson Bend — Single-Sport Micro Schools",
     subtitle: "Grades 6–8 | $35K Tuition | 4–5 Sport Tracks",
