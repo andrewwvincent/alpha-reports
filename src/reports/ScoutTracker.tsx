@@ -8,7 +8,7 @@ const C = {
   amber: "#d97706", amberBg: "#fffbeb", red: "#dc2626", redBg: "#fef2f2",
 };
 
-const API_KEY = "yt_hbh2ySxMCtDejlRyC2vGdOcUAi58LM_Sn2bbfxjW2CI";
+// API calls go through our Vercel serverless proxy at /api/scouting/updates
 
 interface Signal {
   date: string;
@@ -72,9 +72,7 @@ async function fetchAllUpdates(days: number): Promise<ScoutUpdate[]> {
     });
     if (cursor) params.set("cursor", cursor);
 
-    const res = await fetch(`https://api.yutori.com/v1/scouting/updates?${params}`, {
-      headers: { "X-API-Key": API_KEY },
-    });
+    const res = await fetch(`/api/scouting/updates?${params}`);
     const data = await res.json();
     allUpdates.push(...(data.updates || []));
     cursor = data.next_cursor;
